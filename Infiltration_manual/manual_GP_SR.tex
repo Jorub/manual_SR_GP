@@ -32,11 +32,11 @@ BCOR5mm, % Binding correction
 %	TITLE AND AUTHOR(S)
 %----------------------------------------------------------------------------------------
 
-\title{\normalfont\spacedallcaps{$DRUtES$ }} % The article title
+\title{\normalfont\spacedallcaps{Manual}} % The article title
 
-\author{\spacedlowsmallcaps{Manual: Infiltration experiments}} % The article author(s) - author affiliations need to be specified in the AUTHOR AFFILIATIONS block
+\author{\spacedlowsmallcaps{J. Bl\"ocher and M. Kura\v{z}}} % The article author(s) - author affiliations need to be specified in the AUTHOR AFFILIATIONS block
 
-%\date{} % An optional date to appear under the author(s)
+\date{\spacedlowsmallcaps{Manual: Ring infiltration and Guelph permeameter}} % An optional date to appear under the author(s)
 
 %----------------------------------------------------------------------------------------
 
@@ -83,7 +83,7 @@ BCOR5mm, % Binding correction
 %----------------------------------------------------------------------------------------
 \section{Introduction}
 
-Infiltration can be used to determine the field saturated hydraulic conductivity. The difference to the saturated conductivity measured in the laboratory is that the complete saturation of the pores space is above the groundwater table is close to never given. An important role for the value of the saturated hydraulic conductivity is the presence of secondary pores, e.g. fractures and cracks in soils with high clay content, weathered root channels, earth worm path. \medskip
+Infiltration can be used to determine the field saturated hydraulic conductivity $K_{fs}$. The difference to the saturated conductivity $K_s$ measured in the laboratory is that the complete saturation of the pores space is above the groundwater table is close to never given. An important role for the value of the saturated hydraulic conductivity is the presence of secondary pores, e.g. fractures and cracks in soils with high clay content, weathered root channels, earth worm path. \medskip
 
 Infiltration is the process of water entering the soil when water is added to the system. The infiltration behavior of a soil is influenced by the added water, the initial dryness of the soil and hydraulic conductivity of the soil. Additionally, the state of the soil as well as the presence of stagnation layers impact infiltration. \medskip
 
@@ -98,7 +98,7 @@ Ring infiltration is a well-established method to measure the maximal infiltrati
 \caption{\label{schema_inf}Schematic representation of infiltration in dry and in a wet soil.}
 \end{figure}
 
-The asymptotically established infiltration rate that is closely related to the hydraulic conductivity at field saturation. Infiltration experiments are therefore useful to estimate the saturated hydraulic conductivity K$_\mathrm{s}$. For an idealized infiltrometer with an infinite radius (purely 1D vertical water movement) and neglible water overhead, we can assume that at full saturation in the wet soil the gradient of the hydraulic (or matric) head can be assumed to be:
+The asymptotically established infiltration rate that is closely related to the hydraulic conductivity at field saturation. Infiltration experiments are therefore useful to estimate the saturated hydraulic conductivity K$_\mathrm{s}$. For an idealized infiltrometer with an infinite radius (purely 1D vertical water movement) and negligible water well head, we can assume that at full saturation in the wet soil the gradient of the hydraulic (or matrix) head can be assumed to be:
 
 \begin{equation}
 \frac{dh}{dz}=0
@@ -126,7 +126,7 @@ The infiltration curve against time can be described with the 2-parametric equat
 \begin{equation}\label{eq_P}
 \begin{split}
 I(t)&= S\cdot t^{1/2}+A\cdot t +C \\
-i(t)&= S0.5 \cdot S \cdot t^{-1/2}+A.
+i(t)&= 0.5 \cdot S \cdot t^{-1/2}+A.
 \end{split}
 \end{equation}
 The constant $C$ describes the initial state of $C=0$. $S$ is the sorptivity [cm d$^{-\frac{1}{2}}$].
@@ -141,14 +141,14 @@ i(t)= f K_s
 where $f$ is the appropriate scaling factor. $f$ can be computed using 
 
 \begin{equation}\label{eq_wuf}
-f=\frac{H+\phi_m/K_s}{y+r/2}+1
+f=\frac{H+\phi_m/K_s}{z+r/2}+1
 \end{equation}
 
 where $H$ is the height of the water column above the soil, $\phi_m$ is the matric flux potential defining the influence of the water absorption through the unsaturated soil, z is the installation depth and r is the radius of the infiltration ring. Some values of f can be found in Tab.
 
 \begin{table}[!h]
 	\centering
-	\caption{\label{tab_heat}Values for the scaling factor f Eq. \ref{eq_wuf} \cite{wu1997generalized}. The values are for z=5cm,H=5cm and an initial pressure head of pF=3.}
+	\caption{\label{tab_heat}Values for the scaling factor f Eq. \ref{eq_wuf} \cite{wu1997generalized}. The values are for z=5cm,H=5cm and an initial pressure head of pF$=3$.}
 	\adjustbox{max height=\dimexpr\textheight-2cm\relax,
 		max width=\textwidth}{
 		
@@ -165,19 +165,33 @@ where $H$ is the height of the water column above the soil, $\phi_m$ is the matr
 	}
 \end{table}
 
-\subsection{Ring infiltration experiment}
+ \subsection{Experiment procedure}
 
 \begin{enumerate}
-	\item Installation of ring 
-	\item Measurement of diameter of ring
-	\item Installation of water supply and water height regulation
-	\item Beginn of experiment:
+	\item Install the ring with the sharp side downward. For this, use the provided metal cross and hammer. Make sure that the ring enters the ground evenly.  
+	\item Set-up the wooden holder on top of the ring and install the spike-meter. Make sure the wooden holder is level using a water level ruler. 
+	\item Measure the diameter of the ring. Take two or more measurements if the ring is very elliptical.
+	\item Set-up your water supply 
+	\item Get your stop-watch ready
+	\item Make sure you are familiar with the spike-meter as in Fig. \ref{spike}
+	\item Fill the ring with water above the spike-meter
+	\item Taking measurements:
 	\begin{enumerate}
-		\item Read water level in the Mariotte's bottle every 30 s.
-		\item The experiment end when the infiltration is stationary.
+		\item Pick one of the spikes as your reference and get a water-filled cup of known volume ready
+		\item When the water reaches the tip of your reference spike, the measurement starts. This is time 0. 
+		\item As soon as the water reaches the tip of your reference spike, add the volume of water and and start the time.
+		\item Note down the time it takes to reach the reference spike again and add water again. Repeat this until the end of the experiment. If the volume is too large or too small, change it and make sure you know how much water was ended between time intervals.
+		\item Use normed containers of known volume to refill water to upper reference spikes
+		\item The experiment ends when the infiltration is stationary.
 	\end{enumerate}
+	\item Take out the ring from the soil using provided tools.
 \end{enumerate}
 
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=8cm]{SR_spike.png}
+	\caption{\label{spike}Reference spike meter used to read water levels during ring infiltration.}
+\end{figure}
 
 \subsection{Evaluation}
 We measure cumulative infiltration $I$ [cm] as the Volume entering the specific area as a function of time. 
@@ -194,25 +208,50 @@ The infiltration rate can be calculated as:
  \end{equation}
 
 To evaluate we can plot the infiltration rate against time and fit the Phillip's equation to estimate Sorptivity $S$ and the final infiltration rate $i_f$. The saturated conductivity can be estimated using the correction factor f. 
+\newpage
 
 \section{Guelph Permeameter}
 
-The Guelph Permeameter can be used to estimate the near-surface hydraulic conductivity. The Guelph Permeameter creates a constant head and requires only approx. 2 Liter per experiment. Known problems occur with soils that show silting, where the $K_s$ will be underestimated, whereas with  layered soils $K_s$ will be overestimated. 
+The Guelph Permeameter (Fig. \ref{GPsetup} and \ref{GPwork}) can be used to estimate the near-surface hydraulic conductivity. The Guelph Permeameter creates a constant head and requires only approx. 2 Liter per experiment. It's working principle is based on the Mariotte's bottle. Known problems occur with soils that show silting, where the $K_s$ will be underestimated, whereas with  layered soils $K_s$ will be overestimated. 
 
-\begin{figure}
-	\includegraphics[width=8cm]{perm_how.png}
-	\caption{Set-up of in-hole Guelph permeameter \cite{guelph_eil}.}
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=10cm]{perm_set-up.png}
+	\caption{\label{GPsetup}Set-up of in-hole Guelph permeameter \cite{guelph_eil}.}
+\end{figure}
+
+\begin{figure}[!h]
+		\centering
+	\includegraphics[width=10cm]{perm_how.png}
+	\caption{\label{GPwork}Working principle of in-hole Guelph permeameter \cite{guelph_eil}.}
 \end{figure}
  
- \subsection{Experiment}
+ \subsection{Experiment procedure}
  \begin{enumerate}
- 	\item Create bore hole
- 	\item Installation of permeameter and topping up of permeameter 
- 	\item Setting of the constant head with the air entry valve
- 	\item Begin experiment by opening air entry valve
+ 	\item Make a bore hole using an auger drill. Note down diameter of the hole.
+ 	\item Install of the Guelph permeameter. Note down the installation depth.
+ 	\item Fill the Guelph permeameter with water using a siphoning technique. 
+ 	\item Set the constant head with the air entry valve.
+ 	\item Write down reference water levels at which time will be measured.
+ 	\item Use a stop watch to measure the time at which the reference water levels are reached.
  \end{enumerate}
  
  \subsection{Evaluation}
+ 
+ We can use the procedure by \cite{elrick1992methods} stating
+ 
+ \begin{equation}
+ Q= [\frac{2 \pi H^2}{C}+\pi r^2]K_s+\frac{2 \pi H}{C}\phi_m = A \cdot K_s +B \cdot \phi_m
+ \end{equation}
+
+If we neglect the matrix-flux potential, the relationship becomes linear. Considering correcting factors we can assume that the velocity $v$ of the water drop can be linearly related to $K_s$, so that
+
+ 
+ \begin{equation}
+ v= f_{cor} K_s
+\end{equation}
+
+where $f_{cor}$ is a correction factor that we assume to be 10 for our set-up. This factor already contains all of the volume information. v is therefore equal to $\Delta$h.
 %---------------------S-------------------------------------------------------------------
 %	BIBLIOGRAPHY
 %----------------------------------------------------------------------------------------
