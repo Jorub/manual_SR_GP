@@ -34,7 +34,7 @@ BCOR5mm, % Binding correction
 
 \title{\normalfont\spacedallcaps{Manual}} % The article title
 
-\author{\spacedlowsmallcaps{J. Bl\"ocher and M. Kura\v{z}}} % The article author(s) - author affiliations need to be specified in the AUTHOR AFFILIATIONS block
+\author{\spacedlowsmallcaps{J. Bl\"ocher and M. Kur\'a\v{z}}} % The article author(s) - author affiliations need to be specified in the AUTHOR AFFILIATIONS block
 
 \date{\spacedlowsmallcaps{Manual: Ring infiltration and Guelph permeameter}} % An optional date to appear under the author(s)
 
@@ -177,11 +177,11 @@ where $H$ is the height of the water column above the soil, $\phi_m$ is the matr
 	\item Fill the ring with water above the spike-meter
 	\item Taking measurements:
 	\begin{enumerate}
-		\item Pick one of the spikes as your reference and get a water-filled cup of known volume ready
+		\item Pick one of the spikes as your reference and get a water-filled cup of known volume ready.
 		\item When the water reaches the tip of your reference spike, the measurement starts. This is time 0. 
 		\item As soon as the water reaches the tip of your reference spike, add the volume of water and and start the time.
 		\item Note down the time it takes to reach the reference spike again and add water again. Repeat this until the end of the experiment. If the volume is too large or too small, change it and make sure you know how much water was ended between time intervals.
-		\item Use normed containers of known volume to refill water to upper reference spikes
+		\item Use normed containers of known volume to refill water to upper reference spikes.
 		\item The experiment ends when the infiltration is stationary.
 	\end{enumerate}
 	\item Take out the ring from the soil using provided tools.
@@ -252,6 +252,48 @@ If we neglect the matrix-flux potential, the relationship becomes linear. Consid
 \end{equation}
 
 where $f_{cor}$ is a correction factor that we assume to be 10 for our set-up. This factor already contains all of the volume information. v is therefore equal to $\Delta$h.
+
+\section{Error Propagation}
+
+When doing an experiment, it is of vital importance to understand the effect of measurement errors and how they impact the uncertainty of our calculated or estimated property. 
+
+\subsection{Multiplication and Division}
+Our final calculations only contain multiplications and divisions. Using Taylor's expansion a simple way to determine errors can be established.
+
+We assume that the experiments requires knowledge of $3$ parameters a,b and c to calculate x, e.g.
+\begin{equation}
+x=a\cdot \frac{b}{c}
+\end{equation} 
+
+We know that the absolute error to be representable by the standard deviation. The error is $\epsilon_a$ for a, $\epsilon_b$ for b and $\epsilon_c$ for c. We assume that a,b and c are independent and do not correlate. The relative error can then be calculated as:
+
+\begin{equation}
+\delta_x=\frac{\epsilon_x}{x}= \sqrt{(\frac{\epsilon_a}{a})^2+(\frac{\epsilon_b}{b})^2+(\frac{\epsilon_c}{c})^2}
+\end{equation}
+
+This equation gives us the relative error $\delta_x=\frac{\epsilon_x}{x}$. The absolute error is $\epsilon_x=\delta_x \cdot x$.
+
+\subsection{Addition and Subtraction}
+We assume that the experiments requires knowledge of $3$ parameters a,b and c to calculate x, e.g.
+\begin{equation}
+x=a+ b -c
+\end{equation} 
+
+ Again, the error is $\epsilon_a$ for a, $\epsilon_b$ for b and $\epsilon_c$ for c. We assume that a,b and c are independent and do not correlate. The absolute error can then be calculated as:
+
+\begin{equation}
+\epsilon_x= \sqrt{\epsilon_a^2+\epsilon_b^2+\epsilon_c^2}
+\end{equation}
+
+The relative error is $\delta_x=\frac{\epsilon_x}{x}$.
+
+\subsection{Expressing Results}
+
+Let's assume we calculated $x=1.2683783$ and $\epsilon_x$ $0.1$. This reduces our significant figures to 2. Therefore, x should not be given in more detail, but also the error value should be expressed $x=1.3 \pm 0.1$.
+
+\subsection{Warnings}
+
+We assumed our parameters to be uncorrelated and independent. Error propagation should not be used when we measure uncertainty directly, e.g. through repetition of the same experiment.
 %---------------------S-------------------------------------------------------------------
 %	BIBLIOGRAPHY
 %----------------------------------------------------------------------------------------
